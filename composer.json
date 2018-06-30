@@ -1,13 +1,20 @@
 {
     "name": "sergiowiesner/codcommerce",
     "description": "El paquete mas completo de tienda virtual\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dpara laravel de una super tienda virtual",
+    "keywords": ["laravel", "codcommerce", "html5", "Css3", "Javascript", "Php", "virtualshop", "tindavirtual"],
     "type": "metapackage",
     "require": {
         "furiosojack/lara-exception": "dev-master",
         "nesbot/carbon": "~1.18",
-        "barryvdh/laravel-dompdf": "^0.8.0@dev"
+        "barryvdh/laravel-dompdf": "^0.8.0@dev",
+        "php": ">= 5.4"
     },
     "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "sw\\codcommerce\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "sergiowiesner",
