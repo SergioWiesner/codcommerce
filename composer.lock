@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85bd335428941497604883143bc4709d",
+    "content-hash": "bc9b4a1f7a8467ff3266d1534ce25065",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -504,6 +504,59 @@
             "time": "2018-06-18T16:10:24+00:00"
         },
         {
+            "name": "ixudra/curl",
+            "version": "6.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ixudra/curl.git",
+                "reference": "1ab270e48082ee6e7f32fa72412c2c81eb974516"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ixudra/curl/zipball/1ab270e48082ee6e7f32fa72412c2c81eb974516",
+                "reference": "1ab270e48082ee6e7f32fa72412c2c81eb974516",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=4.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ixudra\\Curl\\CurlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Curl": "Ixudra\\Curl\\Facades\\Curl"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ixudra\\Curl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Oris",
+                    "email": "jan.oris@ixudra.be"
+                }
+            ],
+            "description": "Custom PHP Curl library for the Laravel 5 framework - developed by Ixudra",
+            "homepage": "http://ixudra.be",
+            "keywords": [
+                "Ixudra",
+                "curl",
+                "laravel"
+            ],
+            "time": "2017-12-08T14:31:13+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "1.31.1",
             "source": {
@@ -822,6 +875,51 @@
                 "stylesheet"
             ],
             "time": "2016-07-19T19:14:21+00:00"
+        },
+        {
+            "name": "sergiowiesner/swlivedit",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SergioWiesner/swlivedit.git",
+                "reference": "1947445f72224ba7d20ab5f9016cae700e4e3e27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SergioWiesner/swlivedit/zipball/1947445f72224ba7d20ab5f9016cae700e4e3e27",
+                "reference": "1947445f72224ba7d20ab5f9016cae700e4e3e27",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.4"
+            },
+            "type": "metapakage",
+            "autoload": {
+                "psr-4": {
+                    "sw\\livedit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergio Wiesner",
+                    "email": "webdev@codwelt.com"
+                }
+            ],
+            "description": "editor visual en realtime de html5, css3 y javascript",
+            "homepage": "https://github.com/SergioWiesner/swlivedit",
+            "keywords": [
+                "CSS3",
+                "HTML5",
+                "javascript",
+                "laravel",
+                "liveditor",
+                "php"
+            ],
+            "time": "2018-03-05T13:04:18+00:00"
         },
         {
             "name": "symfony/debug",
@@ -1324,10 +1422,13 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "furiosojack/lara-exception": 20,
-        "barryvdh/laravel-dompdf": 20
+        "barryvdh/laravel-dompdf": 20,
+        "sergiowiesner/swlivedit": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">= 5.4"
+    },
     "platform-dev": []
 }
