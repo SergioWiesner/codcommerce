@@ -1,0 +1,38 @@
+<?php
+
+namespace sw\codcommerce\Provider;
+use Illuminate\Support\ServiceProvider;
+
+class RiakServiceProvider extends ServiceProvider
+{
+
+    /**
+     * Bootstrap the application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->publishes([__DIR__.'/../Public' => public_path('codcommerce'),], 'public');
+        $this->publishes([__DIR__.'/../Resource/views/' => resource_path('views/'),], 'views');
+        $this->loadViewsFrom(__DIR__.'/../Resource/views/', 'codcommerce');
+    }
+
+    /**
+     * Register bindings in the container.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->loadRoutesFrom(__DIR__.'/../routes.php');
+        //Registra el servicio para la fachada
+        $this->app->bind('codcommerce',function(){
+
+        });
+
+        $this->app->singleton(Connection::class, function ($app) {
+            return new Connection(config('riak'));
+        });
+    }
+}

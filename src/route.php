@@ -12,3 +12,8 @@
 */
 
 // Tienda virtual
+
+Route::get('/admin/agregar/producto', 'PdfDrawController@index')->name('codcommerce_addproduc');
+Route::get('/admin/productos', 'PdfDrawController@update')->name('codcommerce_products');
+Route::get('/admin/editar/producto', 'PdfDrawController@updatefield')->name('codcommerce_editproduct');
+Route::get('/admin/eliminar/producto', 'PdfDrawController@store')->name('codcommerce_deleteproduct');

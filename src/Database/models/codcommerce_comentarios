@@ -1,0 +1,11 @@
+<?php
+namespace App;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class codcommerce_comentarios extends Model
+{
+    use SoftDeletes;
+    protected $table = "codcommerce_comentarios";
+    protected $fillable = ['codcommerce_comentarios_correo', 'codcommerce_comentarios_comentario', 'codcommerce_comentarios_producto'];
+}
